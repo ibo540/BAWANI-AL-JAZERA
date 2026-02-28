@@ -1,15 +1,18 @@
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
-import { locales, defaultLocale } from './lib/i18n/config';
+
+// Inlined for Edge runtime compatibility (must match lib/i18n/config.ts)
+const LOCALES = ['en', 'ar', 'zh', 'tr'] as const;
+const DEFAULT_LOCALE = 'en';
 
 export function middleware(request: NextRequest) {
   const pathname = request.nextUrl.pathname;
-  const hasLocale = locales.some((loc) => pathname.startsWith(`/${loc}/`) || pathname === `/${loc}`);
+  const hasLocale = LOCALES.some((loc) => pathname.startsWith(`/${loc}/`) || pathname === `/${loc}`);
 
   if (hasLocale) return NextResponse.next();
 
   const url = request.nextUrl.clone();
-  url.pathname = `/${defaultLocale}${pathname === '/' ? '' : pathname}`;
+  url.pathname = `/${DEFAULT_LOCALE}${pathname === '/' ? '' : pathname}`;
   return NextResponse.redirect(url);
 }
 
