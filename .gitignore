@@ -1,0 +1,17 @@
+# Dependencies
+node_modules/
+
+# Next.js / build
+.next/
+out/
+build/
+
+# Env and secrets
+.env*
+*.pem
+
+# OS and editor
+.DS_Store
+*.log
+.vercel
+*.tsbuildinfo

@@ -1,0 +1,141 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "projects": "Projects",
+    "news": "News",
+    "contact": "Contact"
+  },
+  "home": {
+    "hero": {
+      "title": "Building the Future",
+      "subtitle": "BAWANI AL-JAZERA",
+      "description": "Excellence in construction. From concept to completion, we deliver lasting quality and innovation.",
+      "cta": "Get in Touch",
+      "ctaSecondary": "Our Projects"
+    },
+    "services": {
+      "title": "Our Services",
+      "subtitle": "What We Offer",
+      "residential": "Residential",
+      "residentialDesc": "Homes and residential complexes built to the highest standards.",
+      "commercial": "Commercial",
+      "commercialDesc": "Office buildings, retail spaces, and commercial developments.",
+      "infrastructure": "Infrastructure",
+      "infrastructureDesc": "Roads, utilities, and large-scale civil works."
+    },
+    "whyUs": {
+      "title": "Why Choose Us",
+      "subtitle": "Excellence in Every Project",
+      "quality": "Quality First",
+      "qualityDesc": "We never compromise on materials or craftsmanship.",
+      "experience": "Proven Experience",
+      "experienceDesc": "Years of successful projects and satisfied clients.",
+      "innovation": "Innovation",
+      "innovationDesc": "Modern methods and sustainable practices."
+    },
+    "cta": {
+      "title": "Ready to Start Your Project?",
+      "description": "Contact us today for a consultation and let's build something great together.",
+      "button": "Contact Us"
+    },
+    "map": {
+      "sectionSubtitle": "Our Footprint",
+      "sectionTitle": "Projects Across Saudi Arabia",
+      "intro": "Click a marker to zoom and see project details.",
+      "filterAll": "All",
+      "residential": "Residential",
+      "commercial": "Commercial",
+      "infrastructure": "Infrastructure",
+      "viewFullDetails": "View full details",
+      "clickHint": "Click a marker to zoom and view details",
+      "projectsLabel": "Projects"
+    },
+    "partners": {
+      "subtitle": "Global Collaboration",
+      "title": "Our Partners",
+      "paragraph1": "Our partnership includes procurement from UAE, People's Republic of China, and Turkey that is proportional to what agrees with Saudi Arabia standards as part of the collaboration, creativity and commitment that we share. We work together to identify opportunities for cost optimization and improved performance, and to source efficient and reliable UAE, Chinese, and Turkish precursors that meet Saudi Arabia's quality and innovation standards.",
+      "paragraph2": "Procurement from China, Dubai and Turkey is an integral part of our collaborative approach, and we use it to create value for our customers and help them get projects done. With our partnership, we have the potential to provide great value to both parties, and we look forward to continuing to build on our success for years to come.",
+      "tagline": "ALWAYS READY TO PLEASE YOUR NEEDS"
+    }
+  },
+  "about": {
+    "title": "About Us",
+    "subtitle": "Our Story",
+    "story": "Your smart choice, working in a harmonious, efficient manner under a single project management.\n\nAt BAWANI AL JAZIRA, we seek leadership in providing innovative services in Saudi Arabia. We specialize in combining Construction and Fitout services, all managed under the same roof for a unified and efficient experience for our clients.",
+    "visionTitle": "Vision",
+    "vision": "Being a leading construction and fitout business, focusing on delivering quality and innovative services to our customers.\n\nWe value the relationships we create with our customers, partners, and employees, and are dedicated to being a dependable and respected brand in our sector. We endeavor to foster a collaborative atmosphere with respect for all, while delivering the finest service to our clients.\n\nWe are continually striving to refine our strategies and processes to stay ahead of our industry.",
+    "missionTitle": "Mission",
+    "mission": "Our mission is to strive for success and progress within our respective fields. We are dedicated to excellence and are determined to never accept mediocrity. We are passionate about our work and will work hard to ensure that our efforts exceed expectations.",
+    "values": "Our Values",
+    "integrity": "Integrity",
+    "integrityDesc": "We operate with transparency and honesty in every project.",
+    "excellence": "Excellence",
+    "excellenceDesc": "We strive for the highest standards in delivery.",
+    "partnership": "Partnership",
+    "partnershipDesc": "We build lasting relationships with our clients and partners.",
+    "team": "Our Team",
+    "teamDesc": "A dedicated team of professionals committed to your success."
+  },
+  "services": {
+    "title": "Services",
+    "subtitle": "Comprehensive Construction Solutions",
+    "intro": "We offer a full range of construction and development services to meet your needs.",
+    "residential": "Residential Construction",
+    "residentialDesc": "From single-family homes to large residential complexes, we deliver quality and comfort.",
+    "commercial": "Commercial Construction",
+    "commercialDesc": "Office towers, retail centers, and mixed-use developments.",
+    "infrastructure": "Infrastructure",
+    "infrastructureDesc": "Roads, bridges, utilities, and civil engineering projects.",
+    "renovation": "Renovation & Restoration",
+    "renovationDesc": "Modernization and restoration of existing structures."
+  },
+  "projects": {
+    "title": "Projects",
+    "subtitle": "Our Portfolio",
+    "intro": "A selection of our completed and ongoing projects.",
+    "viewAll": "View Project",
+    "filterAll": "All",
+    "residential": "Residential",
+    "commercial": "Commercial",
+    "infrastructure": "Infrastructure",
+    "noProjectsMatch": "No projects match the selected filter. Try choosing \"All\" or another type.",
+    "entries": {
+      "42": { "owner": "Two Schools Complex", "city": "Riyadh", "district": "Schools Project", "description": "مجمعين مدارس – Two Schools Complex construction" },
+      "43": { "owner": "Al Jawar Towers", "city": "Riyadh", "district": "عماير الجوار", "description": "عماير الجوار – Al Jawar Towers construction" }
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Get in Touch",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "phone": "Phone",
+      "message": "Message",
+      "submit": "Send Message"
+    },
+    "info": {
+      "title": "Contact Information",
+      "address": "Address",
+      "addressValue": "Your address here",
+      "phone": "Phone",
+      "email": "Email"
+    }
+  },
+  "news": {
+    "title": "Construction News",
+    "subtitle": "Saudi Arabia",
+    "intro": "Latest construction and infrastructure news in the Kingdom of Saudi Arabia. Updated daily.",
+    "lastUpdated": "Last updated",
+    "noNews": "No news items available at the moment. Please try again later.",
+    "openLink": "Read more"
+  },
+  "footer": {
+    "tagline": "Building the future with excellence.",
+    "links": "Quick Links",
+    "contact": "Contact",
+    "rights": "All rights reserved."
+  }
+}
