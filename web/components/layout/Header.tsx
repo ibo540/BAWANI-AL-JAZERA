@@ -27,10 +27,10 @@ export function Header({ locale, dict }: { locale: Locale; dict?: Dict }) {
       transition={{ duration: 0.3 }}
       className="sticky top-0 z-50 w-full border-b border-slate/50 bg-background/80 backdrop-blur-md"
     >
-      <div className="mx-auto flex h-20 min-h-20 max-w-7xl items-center justify-between gap-4 pl-3 sm:pl-4 pr-4 sm:pr-6 lg:pr-8">
+      <div className="mx-auto flex h-16 min-h-16 sm:h-20 sm:min-h-20 max-w-7xl items-center justify-between gap-2 sm:gap-4 px-3 sm:pl-4 sm:pr-6 lg:pr-8">
         <Link
           href={`/${locale}`}
-          className="flex shrink-0 items-center justify-center transition-opacity hover:opacity-90"
+          className="flex min-w-0 shrink items-center justify-center transition-opacity hover:opacity-90"
           aria-label="BAWANI AL-JAZERA Home"
         >
           <Image
@@ -38,7 +38,7 @@ export function Header({ locale, dict }: { locale: Locale; dict?: Dict }) {
             alt="BAWANI AL-JAZERA"
             width={260}
             height={64}
-            className="h-14 sm:h-16 w-auto object-contain object-center"
+            className="h-10 w-auto max-w-[160px] object-contain object-left sm:h-16 sm:max-w-none"
             priority
           />
         </Link>
@@ -55,13 +55,15 @@ export function Header({ locale, dict }: { locale: Locale; dict?: Dict }) {
           ))}
         </nav>
 
-        <div className="flex shrink-0 items-center gap-3">
-          <ThemeSwitcher />
-          <LanguageSwitcher currentLocale={locale} />
+        <div className="flex shrink-0 items-center gap-2 sm:gap-3">
+          <div className="hidden sm:flex items-center gap-2">
+            <ThemeSwitcher />
+            <LanguageSwitcher currentLocale={locale} />
+          </div>
           <button
             type="button"
             aria-label="Menu"
-            className="md:hidden p-2 text-foreground"
+            className="p-2 text-foreground sm:hidden"
             onClick={() => setOpen((o) => !o)}
           >
             <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -81,19 +83,23 @@ export function Header({ locale, dict }: { locale: Locale; dict?: Dict }) {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden border-t border-slate/50 bg-background/95 backdrop-blur"
+            className="sm:hidden border-t border-slate/50 bg-background/95 backdrop-blur"
           >
-            <nav className="flex flex-col px-4 py-4 gap-2">
+            <nav className="flex flex-col px-4 py-4 gap-1">
               {navLinks.map(({ href, label }) => (
                 <Link
                   key={href}
                   href={href}
-                  className="py-2 text-foreground hover:text-turquoise transition-colors"
+                  className="py-3 text-foreground hover:text-turquoise transition-colors"
                   onClick={() => setOpen(false)}
                 >
                   {label}
                 </Link>
               ))}
+              <div className="flex items-center justify-between pt-4 mt-2 border-t border-slate/50">
+                <ThemeSwitcher />
+                <LanguageSwitcher currentLocale={locale} />
+              </div>
             </nav>
           </motion.div>
         )}

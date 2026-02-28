@@ -47,7 +47,7 @@ export default async function LocaleLayout({
     <>
       <SetLocaleAttributes locale={validLocale} />
       <div
-        className={`${montserrat.variable} ${cairo.variable} font-sans min-h-screen flex flex-col bg-background text-foreground`}
+        className={`${montserrat.variable} ${cairo.variable} font-sans min-h-screen flex flex-col bg-background text-foreground min-w-0 overflow-x-hidden`}
         dir={validLocale === 'ar' ? 'rtl' : 'ltr'}
       >
         <Header locale={validLocale} dict={dict} />
