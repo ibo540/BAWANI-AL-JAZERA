@@ -6,14 +6,18 @@ const LOCALES = ['en', 'ar', 'zh', 'tr'] as const;
 const DEFAULT_LOCALE = 'en';
 
 export function middleware(request: NextRequest) {
-  const pathname = request.nextUrl.pathname;
-  const hasLocale = LOCALES.some((loc) => pathname.startsWith(`/${loc}/`) || pathname === `/${loc}`);
+  try {
+    const pathname = request.nextUrl.pathname || '/';
+    const hasLocale = LOCALES.some((loc) => pathname.startsWith(`/${loc}/`) || pathname === `/${loc}`);
 
-  if (hasLocale) return NextResponse.next();
+    if (hasLocale) return NextResponse.next();
 
-  const url = request.nextUrl.clone();
-  url.pathname = `/${DEFAULT_LOCALE}${pathname === '/' ? '' : pathname}`;
-  return NextResponse.redirect(url);
+    const newPath = pathname === '/' ? `/${DEFAULT_LOCALE}` : `/${DEFAULT_LOCALE}${pathname}`;
+    const redirectUrl = new URL(newPath, request.url);
+    return NextResponse.redirect(redirectUrl);
+  } catch {
+    return NextResponse.next();
+  }
 }
 
 export const config = {
