@@ -1,13 +1,15 @@
 import { NextResponse } from 'next/server';
-import type { NextRequest } from 'next/server';
 
 // Inlined for Edge runtime compatibility (must match lib/i18n/config.ts)
 const LOCALES = ['en', 'ar', 'zh', 'tr'] as const;
 const DEFAULT_LOCALE = 'en';
 
-export function middleware(request: NextRequest) {
+// Use Web API Request (not NextRequest) to avoid pulling in next/server request code
+// that uses __dirname (ua-parser-js) and breaks in Vercel Edge Runtime.
+export function middleware(request: Request) {
   try {
-    const pathname = request.nextUrl.pathname || '/';
+    const url = new URL(request.url);
+    const pathname = url.pathname || '/';
     const hasLocale = LOCALES.some((loc) => pathname.startsWith(`/${loc}/`) || pathname === `/${loc}`);
 
     if (hasLocale) return NextResponse.next();

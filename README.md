@@ -12,13 +12,14 @@ npm run dev
 
 Runs at [http://localhost:3001](http://localhost:3001).
 
-## Deploy on Vercel (fix 404)
+## Deploy on Vercel
 
-The Next.js app lives in the **`web`** folder. To fix **404 NOT_FOUND** on Vercel:
+The Next.js app lives in the **`web`** folder.
 
 1. Open your project on [Vercel](https://vercel.com).
 2. Go to **Settings** → **General**.
-3. Under **Root Directory**, click **Edit**, set it to **`web`**, and Save.
-4. Go to **Deployments**, open the **⋯** menu on the latest deployment, and click **Redeploy**.
+3. Set **Root Directory** to **`web`** (fixes 404 NOT_FOUND).
+4. Under **Build & Development Settings**, set **Framework Preset** to **Next.js** (fixes `__dirname is not defined` in middleware on Edge).
+5. Redeploy from **Deployments** if you changed settings.
 
-After redeploying, https://bawani-al-jazera.vercel.app should load correctly.
+After redeploying, the site should load correctly.
