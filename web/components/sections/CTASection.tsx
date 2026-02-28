@@ -57,11 +57,11 @@ export function CTASection({ dict, locale }: { dict: CTADict; locale: string }) 
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.35, delay: 0.3 }}
           animate={{
             scale: [1, 1.04, 1],
           }}
           transition={{
+            opacity: { duration: 0.35, delay: 0.3 },
             scale: {
               duration: 2.2,
               repeat: Infinity,
