@@ -43,7 +43,7 @@ export function AnimatedText({
       opacity: 1,
       transition: {
         duration,
-        ease: [0.25, 0.46, 0.45, 0.94], // easeOutQuart — cinematic feel
+        ease: [0.25, 0.46, 0.45, 0.94] as const, // easeOutQuart — cinematic feel
       },
     },
   };
@@ -91,7 +91,7 @@ export function AnimatedFadeUp({ children, delay = 0, className = '' }: Animated
       transition={{
         duration: 0.7,
         delay,
-        ease: [0.25, 0.46, 0.45, 0.94],
+        ease: [0.25, 0.46, 0.45, 0.94] as const,
       }}
     >
       {children}
